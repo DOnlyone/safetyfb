@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/show",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/work/show",
+    "pages/notice/show",
+    "pages/mine/show",
+    "pages/logs/logs"
+  ],
+  "usingComponents": {
+    "van-button": "./component/vant/button/index",
+    "van-tab": "./component/vant/tab/index",
+    "van-tabs": "./component/vant/tabs/index",
+    "van-sidebar": "./component/vant/sidebar/index",
+    "van-sidebar-item": "./component/vant/sidebar-item/index",
+      "van-row": "./component/vant/row/index",
+      "van-col": "./component/vant/col/index",
+      "van-skeleton": "./component/vant/skeleton/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/show",
+        "text": "首页",
+        "iconPath": "icon/shouye.png",
+        "selectedIconPath": "icon/_shouye.png"
+      },
+      {
+        "pagePath": "pages/work/show",
+        "text": "工作台",
+        "iconPath": "icon/gongzuotai.png",
+        "selectedIconPath": "icon/_gongzuotai.png"
+      },
+      {
+        "pagePath": "pages/notice/show",
+        "text": "通知",
+        "iconPath": "icon/tongzhi.png",
+        "selectedIconPath": "icon/_tongzhi.png"
+      },
+      {
+        "pagePath": "pages/mine/show",
+        "text": "我的",
+        "iconPath": "icon/wode.png",
+        "selectedIconPath": "icon/_wode.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

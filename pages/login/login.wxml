@@ -1,0 +1,45 @@
+
+<!--pages/login/login.wxml-->
+<view class="container"> 
+  <view class="login-icon">  
+    <image class="login-img" src="/images/logo.png"></image>  
+  </view>  
+  <view class="login-from">  
+  <form bindsubmit="formSubmit" class='form'>
+    <view class="myno">
+    <!-- 学号 -->
+      <view class="weui-cell weui-cell_input" style="height:100%">
+      <image class="nameImage" src="/icon/name.png"></image>
+          <!-- <view class="weui-cell__hd">
+              <view class="weui-label">学号</view>
+          </view> -->
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="no" bindinput="noinput" value='{{no}}' placeholder="请输入学号" />
+          </view>
+      </view>
+    </view>
+    <view class="mypwd">
+      <!-- 密码 -->
+      <view class="weui-cell weui-cell_input" style="height:100%">
+      <image class="nameImage" src="/icon/key.png"></image>
+          <!-- <view class="weui-cell__hd">
+              <view class="weui-label">密码</view>
+          </view> -->
+          <view class="weui-cell__bd">
+              <input class="weui-input" type="password" name="pwd" bindinput="pwdinput" placeholder="请输入密码" value='{{pwd}}'/>
+          </view>
+      </view>
+
+    </view>
+     <!--按钮-->  
+
+    <view class="loginBtnView">  
+      <!-- form-type='submit' 标识一个表单提交事件，表单提交时触发form表单的bindsubmit="formSubmit" -->
+      <van-button  type="primary"  form-type='submit'>登录</van-button>  
+    </view>  
+
+    </form> 
+      <van-button type="primary">微信登陆</van-button>
+  
+  </view>  
+</view>  

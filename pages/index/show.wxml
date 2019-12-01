@@ -1,0 +1,25 @@
+<!--pages/index/show.wxml-->
+<view class="header">
+  <view class="nav" bindtap="changeTab">
+    <view class="nav-wrapper">
+      <block wx:for="{{tabs.list}}">
+        <view class="tab current" data-type="{{item.type}}" data-index="{{index}}" wx:if="{{index / 1 == tabs.currentIndex / 1}}">安全</view>
+        <view class="tab" data-type="{{item.type}}" data-index="{{index}}" wx:else>{{item.text}}</view>
+      </block>
+    </view>
+  </view>
+</view>
+<swiper indicator-dots="{{true}}">
+  <swiper-item><image src="../../image/a.png"></image></swiper-item>
+  <swiper-item><image src="../../image/b.jpg"></image></swiper-item>
+  <swiper-item><image src="../../image/c.jpg"></image></swiper-item>
+</swiper>
+    <view class="page__hd">
+        <!--<view class="page__title">title</view> -->
+        <view class="weui-panel__hd">图文组合列表</view>
+        <view class="weui-panel__bd">
+        <van-skeleton title avatar loading="{{true}}" row="3" >
+          <view>neirong</view>
+        </van-skeleton>
+        </view>
+    </view>
