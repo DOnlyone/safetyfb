@@ -1,0 +1,26 @@
+/* pages/work/show.wxss */
+.tab{
+position: absolute;
+clip: rect(0, 0, 0, 0);
+}
+.tab+label{
+        display: block;
+        height: 30rpx;
+        padding: 6rpx 12rpx;
+        font-size: 26rpx;
+        font-weight: 500;
+        line-height: 1; 
+       /* color: #009aff;*/
+        border: 1px solid #ccc;
+        text-align: center;
+        float: left;
+        margin-right: 10rpx;
+        cursor: pointer;
+        border-radius: 4rpx;
+        background-color: #009aff
+}
+.text{
+  width: 99%;
+  border:solid 1rpx;
+}
+

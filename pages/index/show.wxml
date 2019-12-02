@@ -1,0 +1,58 @@
+<!--pages/index/show.wxml-->
+<view class="header">
+  <view class="nav" bindtap="changeTab">
+    <view class="nav-wrapper">
+      <block wx:for="{{tabs.list}}">
+        <view class="tab current" data-type="{{item.type}}" data-index="{{index}}" wx:if="{{index / 1 == tabs.currentIndex / 1}}">安全</view>
+        <view class="tab" data-type="{{item.type}}" data-index="{{index}}" wx:else>{{item.text}}</view>
+      </block>
+    </view>
+  </view>
+</view>
+<swiper indicator-dots="{{true}}">
+  <swiper-item>
+    <image src="../../image/a.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../image/b.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../image/c.jpg"></image>
+  </swiper-item>
+</swiper>
+<view class="page__hd">
+  <!--<view class="page__title">title</view> -->
+  <view class="weui-panel__hd">
+    <view>安全知识/工作通知</view>
+    <view class="weui-cell__hd">查看更多</view>
+  </view>
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">标题一</view>
+      <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+      <view class="weui-media-box__info">
+        <view class="weui-media-box__info__meta">文字来源</view>
+        <view class="weui-media-box__info__meta">时间</view>
+        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">其它信息</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-----安全新闻/未上报通知----->
+<view class="page__hd">
+  <view class="weui-panel__hd">
+    <view>安全新闻/未上报通知</view>
+    <view class="weui-cell__hd">查看更多</view>
+  </view>
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">标题一</view>
+      <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+      <view class="weui-media-box__info">
+        <view class="weui-media-box__info__meta">文字来源</view>
+        <view class="weui-media-box__info__meta">时间</view>
+        <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">其它信息</view>
+      </view>
+    </view>
+  </view>
+</view>
