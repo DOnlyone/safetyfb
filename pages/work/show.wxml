@@ -1,4 +1,5 @@
 <!--pages/work/show.wxml-->
+
 <van-nav-bar
   title="安全上报"
   left-text="返回"
@@ -66,4 +67,3 @@
 
 -->
 </form>
-

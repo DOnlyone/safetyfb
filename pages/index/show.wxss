@@ -53,6 +53,7 @@
   background: -webkit-gradient(linear, 0 0, 0 100%, from(#252525), to(#2f2f2f));
   box-shadow: inset 0 0 4px #111;
   text-shadow: 0 2px 3px #000;
+
 }
 .weui-panel__hd{
   display: flex;
