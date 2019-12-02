@@ -6,12 +6,6 @@
         <view class="weui-form-preview__item">
           <view class="weui-form-preview__label">商品</view>
           <view class="weui-form-preview__value">电动打蛋机</view>
-          <view class="weui-form-preview__label">商品</view>
-          <view class="weui-form-preview__value">电动打蛋机</view>
-        </view>
-        <view class="weui-form-preview__item">
-          <view class="weui-form-preview__label">商品</view>
-          <view class="weui-form-preview__value">电动打蛋机</view>
         </view>
       </view>
     </view>
