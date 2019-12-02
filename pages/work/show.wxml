@@ -10,9 +10,11 @@
 <form>
 <view>
   <van-row>
-  <van-col span="8">上报类型</van-col>
+  <van-col span="8" >
+    <view class="weui-cell">上报类型</view>
+  </van-col>
   <van-col span="16">
-    <checkbox-group>
+    <checkbox-group class="weui-cell">
       <checkbox class="tab" /><label>aaaa</label>
       <checkbox class="tab" /><label>bbbb</label>
       <checkbox class="tab" /><label>cccc</label>
@@ -23,9 +25,11 @@
 </view>
 <view>
   <van-row>
-  <van-col span="8">紧急程度</van-col>
+  <van-col span="8">
+  <view class="weui-cell">紧急程度</view>
+  </van-col>
   <van-col span="16">
-    <checkbox-group>
+    <checkbox-group class="weui-cell">
       <checkbox class="tab" /><label>不紧急</label>
       <checkbox class="tab" /><label>一般</label>
       <checkbox class="tab" /><label>紧急</label>
@@ -47,16 +51,18 @@
   </van-col>
 </van-row>
 </view>
-<view>
+<view >
     <textarea class="text" placeholder="内容" auto-focus="{{true}}"></textarea>
 </view>
-<view>
-  <van-row>
-  <van-col span="8">紧急程度</van-col>
-  <van-col span="16">
-    
-  </van-col>
-</van-row>
+<view class="weui-cell" style="justify-content:center">
+
+<van-uploader use-slot>
+  <van-button icon="photo" type="primary" size="large">上传文件</van-button>
+</van-uploader>
+</view>
+<view style="text-align:center">
+  <button class="weui-btn mini-btn" type="primary" size="mini">保存</button>
+  <button class="weui-btn mini-btn" type="warn" size="mini">提交</button>
 </view>
 <!--
 <view>
