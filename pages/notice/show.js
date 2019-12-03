@@ -5,7 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    contextData:[
+      {titleText:'班级',value:'软件一班'},
+      { titleText: '职位', value: '班长' },
+      { titleText: '类型', value: '通知' },
+      { titleText: '状态', value: '待审批' },
+      { titleText: '紧急程度', value: '紧急' },
+      { titleText: '学生', value: '张三' },
+      { titleText: '上报人', value: '李四' },
+      { titleText: '上报时间', value: '2019-12-03' }
+    ],
+    active:2,
+    steps: [
+      {
+        text: '步骤一',
+        desc: '描述信息',
+        active:true
+      },
+      {
+        text: '步骤二',
+        desc: '描述信息',
+        active: true
+      },
+      {
+        text: '步骤三',
+        desc: '描述信息'
+      },
+      {
+        text: '步骤四',
+        desc: '描述信息'
+      }
+    ]
   },
 
   /**

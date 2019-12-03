@@ -2,12 +2,88 @@
 <view class="page__bd">
   <view class="weui-form-preview">
     <view class="weui-form-preview__bd">
-      <view class="weui-form-preview__item">
         <view class="weui-form-preview__item">
-          <view class="weui-form-preview__label">商品</view>
-          <view class="weui-form-preview__value">电动打蛋机</view>
-        </view>
+
+          <van-row>
+            <van-col span="6">
+              <view class="header">班级</view>
+            </van-col>
+            <van-col span="6">
+              <view class="body ">软件一班</view>
+            </van-col>
+            <van-col span="6">
+              <view class="header">职位</view>
+            </van-col>
+            <van-col span="6">
+              <view class="body">班长</view>
+            </van-col>
+          </van-row>
+          <van-row>
+            <van-col span="6">
+              <view class="header">类型</view>
+            </van-col>
+            <van-col span="6">
+              <view class="body ">通知</view>
+            </van-col>
+            <van-col span="6">
+              <view class="header">状态</view>
+            </van-col>
+            <van-col span="6">
+              <view class="body">待审批</view>
+            </van-col>
+          </van-row>
+                    <van-row>
+            <van-col span="6">
+              <view class="header">紧急程度</view>
+            </van-col>
+            <van-col span="6">
+              <view class="body ">紧急</view>
+            </van-col>
+            <van-col span="6">
+              <view class="header">学生</view>
+            </van-col>
+            <van-col span="6">
+              <view class="body">张三</view>
+            </van-col>
+          </van-row>
+                    <van-row>
+            <van-col span="6">
+              <view class="header">上报人</view>
+            </van-col>
+            <van-col span="6">
+              <view class="body ">李四</view>
+            </van-col>
+            <van-col span="6">
+              <view class="header">上报时间</view>
+            </van-col>
+            <van-col span="6">
+              <view class="body">2019.11.28</view>
+            </van-col>
+          </van-row>
+
       </view>
     </view>
+    <view class="weui-form-preview__bd">
+      <view class="weui-article__p">
+        三年级某班张三最近心情低落，请辅导员关注
+      </view>
+    </view>
+
   </view>
 </view>
+<van-steps
+direction="vertical"
+  steps="{{ steps }}"
+  active="{{ active }}"
+  active-color="#ee0a24"
+/>
+<!--         
+
+                        <view class="header weui-form-preview__label">班级</view>
+
+              <view class="body weui-form-preview__value">软件一班</view>
+
+              <view class="header weui-form-preview__label">职位</view>
+
+              <view class="body weui-form-preview__value">班长</view>
+          -->

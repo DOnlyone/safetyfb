@@ -1,1 +1,10 @@
 /* pages/notice/show.wxss */
+.header{
+  float: left;
+  font-weight: 700;
+  font-family: SimHei;
+  color: black;
+}
+.body{
+  text-align: center;
+}
