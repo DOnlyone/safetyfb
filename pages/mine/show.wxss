@@ -1,1 +1,130 @@
-/* pages/mine/show.wxss */
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.info-card {
+  position: relative;
+  display: flex;
+  width: 750rpx;
+  height: 390rpx;
+  background-image: url('https://static.airbob.org/under-graduate/userpage/mine_pic_card.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 60rpx;
+}
+
+.main-info {
+  position: relative;
+  width: 750rpx;
+  height: 150rpx;
+  margin-top: 120rpx;
+  display: flex;
+}
+
+.main-info-avatar {
+  display: inline-block;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 30rpx 0 60rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.main-info-name {
+  display: inline-block;
+  margin-top: 25rpx;
+  height: 100rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.main-info-name-items {
+  height: 50rpx;
+  display: flex;
+  line-height: 50rpx;
+}
+
+.change-phonenumber {
+  display: inline-block;
+  margin-left: 16rpx;
+  width: 50rpx;
+  height: 50rpx;
+  background-image: url('https://static.airbob.org/under-graduate/phonenum.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.function-line {
+  position: relative;
+  width: 750rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.function-line-image {
+  position: relative;
+  display: inline-block;
+  width: 150rpx;
+  height: 40rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.function-line-content {
+  position: relative;
+  display: inline-block;
+  font-size: 32rpx;
+  color: #353535;
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.function-line-arrow {
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  top: 25rpx;
+  right: 25rpx;
+  background-image: url('https://static.airbob.org/under-graduate/userpage/button_right.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cancel-bind {
+  width: 700rpx;
+  font-size: 32rpx;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 25rpx;
+  margin-top: 100rpx;
+  border-radius: 50rpx;
+  text-align: center;
+  background: linear-gradient(-255deg, #abdcff 0%, #6ae4ff 100%);
+}

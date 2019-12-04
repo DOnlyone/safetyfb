@@ -1,2 +1,44 @@
-<!--pages/mine/show.wxml-->
-<text>pages/mine/show.wxml</text>
+<view>
+  <view class="container" slot="qy-content">
+    <view class="info-card">
+      <view class="main-info">
+      <!--
+        <view class="main-info-avatar">
+          <open-data type='userAvatarUrl'></open-data>
+        </view>
+        -->
+        <view class="main-info-name">
+          <view class="main-info-name-items" style="font-size:32rpx">{{name}}</view>
+          <view class="main-info-name-items" style="margin-top:15rpx">已绑定的手机号：{{phoneNumber}}
+            <view class="change-phonenumber" bindtap="goChangePhone"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+          <view class="function-line">
+
+        <view class="function-line-image" style="background-image:url('https://static.airbob.org/under-graduate/userpage/mine_icon_help.png')"></view>
+
+        <view class="function-line-content" bindtap="goFeedback">帮助与反馈<view class="function-line-arrow"></view></view>
+
+      </view>
+
+      <view class="function-line">
+
+        <view class="function-line-image" style="background-image:url('https://static.airbob.org/under-graduate/userpage/mine_icon_about.png')"></view>
+
+        <view class="function-line-content" bindtap="goAboutUs">关于我们<view class="function-line-arrow"></view></view>
+
+      </view>
+
+      <view class="function-line">
+
+        <view class="function-line-image" style="background-image:url('https://static.airbob.org/under-graduate/userpage/mine_icon_changelog.png')"></view>
+
+        <view class="function-line-content" bindtap="goChangelog" >更新日志<view class="function-line-arrow"></view></view>
+
+      </view>
+
+      <view class="cancel-bind" bindtap="removeBind">退出登录</view>
+  </view>
+</view>
