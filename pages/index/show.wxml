@@ -6,7 +6,7 @@
         <view class="tab current" data-type="{{item.type}}" data-index="{{index}}" wx:if="{{index / 1 == tabs.currentIndex / 1}}">安全</view>
         <view class="tab" data-type="{{item.type}}" data-index="{{index}}" wx:else>{{item.text}}</view>
       </block>
-    </view>
+    </view>  
   </view>
 </view>
 <swiper indicator-dots="{{true}}">

@@ -2,11 +2,9 @@
   <view class="container" slot="qy-content">
     <view class="info-card">
       <view class="main-info">
-      <!--
         <view class="main-info-avatar">
           <open-data type='userAvatarUrl'></open-data>
         </view>
-        -->
         <view class="main-info-name">
           <view class="main-info-name-items" style="font-size:32rpx">{{name}}</view>
           <view class="main-info-name-items" style="margin-top:15rpx">已绑定的手机号：{{phoneNumber}}

@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    dialogShow: false,
+    showOneButtonDialog: false,
+    buttons: [{ text: '取消' }, { text: '确定' }],
+    oneButton: [{ text: '确定' }],
     contextData:[
       {titleText:'班级',value:'软件一班'},
       { titleText: '职位', value: '班长' },
@@ -36,6 +40,22 @@ Page({
         desc: '描述信息'
       }
     ]
+  },
+  openConfirm: function () {
+    this.setData({
+      dialogShow: true
+    })
+  },
+  tapDialogButton(e) {
+    this.setData({
+      dialogShow: false,
+      showOneButtonDialog: false
+    })
+  },
+  tapOneDialogButton(e) {
+    this.setData({
+      showOneButtonDialog: true
+    })
   },
 
   /**
