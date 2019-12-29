@@ -35,11 +35,11 @@
 
     <view class="loginBtnView">  
       <!-- form-type='submit' 标识一个表单提交事件，表单提交时触发form表单的bindsubmit="formSubmit" -->
-      <van-button  type="primary"  form-type='submit'>登录</van-button>  
+      <button style="width:90%" class="weui-btn"  type="primary"  form-type='submit'>登录</button>  
+<!--      <button round  type="primary">微信登陆</button> -->
     </view>  
-
     </form> 
-      <van-button type="primary">微信登陆</van-button>
+      
   
   </view>  
 </view>  
