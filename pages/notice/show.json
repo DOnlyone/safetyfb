@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "van-steps": "../../component/vant/steps/index"
+    "van-steps": "../../component/vant/steps/index",
+    "mp-dialog": "../../component/weui/dialog/dialog"
   }
 }

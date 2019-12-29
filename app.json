@@ -3,6 +3,7 @@
     "pages/login/login",
     "pages/index/show",
     "pages/index/index",
+    "pages/work/index",
     "pages/work/show",
     "pages/notice/show",
     "pages/mine/show",

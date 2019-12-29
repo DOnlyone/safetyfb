@@ -8,3 +8,16 @@
 .body{
   text-align: center;
 }
+.weui-dialog{
+  width: 85%;
+}
+.page{
+  clear: both;
+}
+.left_btn{
+  float: right;
+}
+.step_title{
+  font-size: 18px;
+  font-weight: 700;
+}
