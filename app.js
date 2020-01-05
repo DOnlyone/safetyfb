@@ -35,5 +35,13 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  onLaunch(options) {
+    // Do something initial when launch.
+    console.log(options)
+  },
+  onShow(options) {
+    // Do something when show.
+    console.log(options)
   }
 })

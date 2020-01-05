@@ -58,13 +58,3 @@
 </view>
 
 
-    <view class="page__hd">
-        <!--<view class="page__title">title</view> -->
-        <view class="weui-panel__hd">图文组合列表</view>
-        <view class="weui-panel__bd">
-        <van-skeleton title avatar loading="{{true}}" row="3" >
-          <view>neirong</view>
-        </van-skeleton>
-        </view>
-    </view>
-

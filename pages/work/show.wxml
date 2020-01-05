@@ -1,70 +1,79 @@
-<!--pages/work/show.wxml-->
-
-<van-nav-bar
-  title="安全上报"
-  left-text="返回"
-  left-arrow
-  bind:click-left="onClickLeft"
-  bind:click-right="onClickRight"
-/>
+<van-nav-bar title="安全上报" left-text="返回" left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" />
 <form>
-<view>
-  <van-row>
-  <van-col span="8" >
-    <view class="weui-cell">上报类型</view>
-  </van-col>
-  <van-col span="16">
-    <checkbox-group class="weui-cell">
-      <checkbox class="tab" /><label>aaaa</label>
-      <checkbox class="tab" /><label>bbbb</label>
-      <checkbox class="tab" /><label>cccc</label>
-      <checkbox class="tab" /><label>cccc</label>
-    </checkbox-group>
-  </van-col>
-</van-row>
-</view>
-<view>
-  <van-row>
-  <van-col span="8">
-  <view class="weui-cell">紧急程度</view>
-  </van-col>
-  <van-col span="16">
-    <checkbox-group class="weui-cell">
-      <checkbox class="tab" /><label>不紧急</label>
-      <checkbox class="tab" /><label>一般</label>
-      <checkbox class="tab" /><label>紧急</label>
-      <checkbox class="tab" /><label>非常紧急</label>
-    </checkbox-group>
-  </van-col>
-</van-row>
-</view>
-<view>
-<van-row>
-  <van-col span="8" >
-    <view class="weui-cell weui-cell_access">学生</view>
-  </van-col>
-  <van-col span="16">
-                                  <navigator url="" class="weui-cell weui-cell_access">
-                                    <view class="weui-cell__bd">请选择</view>
-                                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                                </navigator>
-  </van-col>
-</van-row>
-</view>
-<view >
-    <textarea class="text" placeholder="内容" auto-focus="{{true}}"></textarea>
-</view>
-<view class="weui-cell" style="justify-content:center">
+  <view>
+    <van-row>
+      <van-col span="8">
+        <view class="weui-cell">上报类型</view>
+      </van-col>
+      <van-col span="16">
+        <view class="checkboxgroup weui-cell">
+          <block wx:for="{{contentType}}" wx:key="parameter">
+            <text class='parameter-info text-over {{item.checked?"checked_parameter":""}}' data-id='{{item.name}}' bindtap='parameterTap'>{{item.value}}</text>
+          </block>
+          </view>
+      </van-col>
+    </van-row>
+    </view>
+    <view>
+      <van-row>
+        <van-col span="8">
+          <view class="weui-cell">紧急程度</view>
+        </van-col>
+        <van-col span="16">
+          <view class="checkboxgroup weui-cell">
+          <block wx:for="{{urgencys}}" wx:key="parameter">
+            <text class='parameter-info text-over {{item.checked?"checked_parameter":""}}' data-id='{{item.name}}' bindtap='urgencysTap'>{{item.value}}</text>
+          </block>
+          </view>
+          <!--
+          <checkbox-group class="weui-cell">
+            <checkbox class="tab" />
+            <label>不紧急</label>
+            <checkbox class="tab" />
+            <label>一般</label>
+            <checkbox class="tab" />
+            <label>紧急</label>
+            <checkbox class="tab" />
+            <label>非常紧急</label>
+          </checkbox-group>
+          -->
+        </van-col>
+      </van-row>
+    </view>
+    <view>
+      <van-row>
+        <van-col span="8">
+          <view class="weui-cell weui-cell_access">学生</view>
+        </van-col>
+        <van-col span="16">
+          <navigator url="./userList" class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">请选择</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+        </van-col>
+      </van-row>
+    </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea bindblur="textareFun" auto-focus="true" bindinput="textareFun" value="{{text}}" class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+        <!--
+    <view class="weui-cell" style="justify-content:center">
 
-<van-uploader use-slot>
-  <van-button icon="photo" type="primary" size="large">上传文件</van-button>
-</van-uploader>
-</view>
-<view style="text-align:center">
-  <button class="weui-btn mini-btn" type="primary" size="mini">保存</button>
-  <button class="weui-btn mini-btn" type="warn" size="mini">提交</button>
-</view>
-<!--
+      <van-uploader use-slot>
+        <van-button icon="photo" type="primary" size="large">上传文件</van-button>
+      </van-uploader>
+    </view>
+    -->
+    <view style="text-align:center;display:flex">
+      <button bindtap="saveForm" style="margin-top:16px;width:120px" class="weui-btn mini-btn" type="primary" size="large">保存</button>
+      <button style="width:120px" class="weui-btn mini-btn" type="warn" size="large">提交</button>
+    </view>
+    <!--
 <view>
 <van-dropdown-menu>
   <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />

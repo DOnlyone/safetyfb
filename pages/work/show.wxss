@@ -25,3 +25,36 @@ clip: rect(0, 0, 0, 0);
   border:solid 1rpx;
 }
 
+
+.parameter-info{
+
+  padding:4rpx 4rpx 4rpx 4rpx;
+
+  font-size: 26rpx;
+
+  line-height:1.5285714300000004;
+
+  border:1px solid transparent;
+
+  border-radius:4rpx;
+
+  background-color:#F0F0F0;
+
+  display:inline-block;
+  /*
+  width:168rpx;
+
+  height:39rpx;
+*/
+  margin-top:16rpx;
+
+  margin-right:20rpx;
+
+}
+
+.checked_parameter{
+
+	color: #eea236;
+
+}
+

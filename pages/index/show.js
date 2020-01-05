@@ -18,6 +18,12 @@ Page({
   },
   changeTab: function (e) {
     console.log(e);
+    /*
+    wx.navigateBack({
+      url:''
+      });
+      */
+    
   },
   onChange(event) {
     wx.showToast({

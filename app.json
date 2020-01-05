@@ -1,13 +1,17 @@
 {
   "pages": [
-    "pages/login/login",
+    
+    "pages/work/worklist",
     "pages/index/show",
+    "pages/login/login",
     "pages/index/index",
     "pages/work/index",
     "pages/work/show",
     "pages/notice/show",
     "pages/mine/show",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/work/userList"
+    
   ],
   "usingComponents": {
     "van-button": "./component/vant/button/index",
@@ -15,13 +19,13 @@
     "van-tabs": "./component/vant/tabs/index",
     "van-sidebar": "./component/vant/sidebar/index",
     "van-sidebar-item": "./component/vant/sidebar-item/index",
-      "van-row": "./component/vant/row/index",
-      "van-col": "./component/vant/col/index",
-      "van-skeleton": "./component/vant/skeleton/index",
-      "van-nav-bar": "./component/vant/nav-bar/index",
-      "van-tag": "./component/vant/tag/index",
-        "van-dropdown-menu": "./component/vant/dropdown-menu/index",
-        "van-dropdown-item": "./component/vant/dropdown-item/index"
+    "van-row": "./component/vant/row/index",
+    "van-col": "./component/vant/col/index",
+    "van-skeleton": "./component/vant/skeleton/index",
+    "van-nav-bar": "./component/vant/nav-bar/index",
+    "van-tag": "./component/vant/tag/index",
+    "van-dropdown-menu": "./component/vant/dropdown-menu/index",
+    "van-dropdown-item": "./component/vant/dropdown-item/index"
   },
   "window": {
     "backgroundTextStyle": "light",
@@ -38,7 +42,7 @@
         "selectedIconPath": "icon/_shouye.png"
       },
       {
-        "pagePath": "pages/work/show",
+        "pagePath": "pages/work/worklist",
         "text": "工作台",
         "iconPath": "icon/gongzuotai.png",
         "selectedIconPath": "icon/_gongzuotai.png"
