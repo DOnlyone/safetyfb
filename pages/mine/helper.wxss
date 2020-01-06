@@ -1,0 +1,72 @@
+.feedback-container{
+position:relative;
+  width:700rpx;
+  margin:0 auto;
+  color: #353535;
+  padding-bottom: 100rpx;
+}
+  
+  .main-title{
+    font-size: 34rpx;
+    font-weight: bold;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #E3E3E3;
+  }
+
+  .detail-title{
+    position: relative;
+    font-size: 30rpx;
+    height: 35rpx;
+    line-height: 35rpx;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #E3E3E3;
+    overflow: hidden;
+  }
+
+    .arrow-image{
+      position: absolute;
+      right: 30rpx;
+      top: 30rpx;
+      width: 30rpx;
+      height: 30rpx;
+      background-image: url('https://static.airbob.org/under-graduate/feedback/button_down.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .main-info{
+      position: relative;
+      font-size: 24rpx;
+      color: #888888;
+      padding: 30rpx 0 0 0;
+    }
+
+.bottom{
+ position:fixed;
+  bottom: 0rpx;
+  width:750rpx;
+  height: 100rpx;
+  color: #ffffff;
+  font-size:36rpx;
+  font-weight: bold;
+  text-align:center;
+}
+ 
+  .to-feedback{
+    position:relative;
+    display:inline-block;
+    width:375rpx;
+    line-height: 100rpx;
+    height:100rpx;
+    background:linear-gradient(-45deg, #ABDCFF 0%, #6AE4FF 100%);
+  }
+
+  .history-feedback{
+    position: relative;
+    display: inline-block;
+    width:375rpx;
+    line-height: 100rpx;
+    height: 100rpx;
+    background:linear-gradient(-225deg, #A8F7E2 0%, #5EDEB4 100%);
+  }

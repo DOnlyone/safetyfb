@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "van-collapse": "../../component/vant/collapse/index",
+      "van-collapse-item": "../../component/vant/collapse-item/index"
+  }
+}

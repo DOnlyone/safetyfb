@@ -1,0 +1,18 @@
+ <view>
+    <view class="header">
+      <image mode="aspectFit" src="https://static.airbob.org/admin/about_pic_logo.png" class="header-logo"/>
+    </view>
+    <view class="body">
+      <view class="body-head">- 学生安全工作反馈系统 -</view>
+      <view class="body-content">
+        学生安全工作反馈小程序是由什么开发，具有什么样的特点。
+      </view>
+      <view class="body-content">
+        欢迎同学们一起见证小程序的不断完善，交流反馈：xxx@qq.com。
+      </view>
+    </view>
+    <view class="footer">
+      <view class="footer-dialog-btn" bindtap="goProtocol">用户协议 | 隐私政策</view>
+        <view class="footer-version">Version 1.0</view>
+    </view>
+  </view>

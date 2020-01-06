@@ -1,0 +1,44 @@
+.header{
+ text-align:center;
+  height:340rpx;
+  background: url('https://static.airbob.org/admin/about_pic_bg.png');
+  background-size: contain;
+}
+ 
+.header  .header-logo{
+    width:390rpx;
+    margin-top:-70rpx;
+}
+
+
+.body-head{
+  margin-bottom:30rpx;
+  text-align:center;
+  font-size:34rpx;
+}
+
+.body-content{
+  color:#888;
+  line-height:200%;
+  font-size:32rpx;
+  padding:0 60rpx;
+  text-indent: 64rpx;
+  text-align: justify;
+}
+
+
+.footer{
+  margin-top:100rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+  .footer-dialog-btn{
+    margin: 15rpx 0;
+    color: #4ad1f4;
+  }
+   
+  .footer-version{
+    color: #7d7d7d;
+  }
