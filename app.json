@@ -1,17 +1,18 @@
 {
   "pages": [
-    
-    "pages/work/worklist",
+    "pages/mine/show",
+    "pages/mine/aboutus",
     "pages/index/show",
     "pages/login/login",
     "pages/index/index",
     "pages/work/index",
     "pages/work/show",
     "pages/notice/show",
-    "pages/mine/show",
     "pages/logs/logs",
-    "pages/work/userList"
-    
+    "pages/work/userList",
+    "pages/work/worklist",
+    "pages/mine/changelog",
+    "pages/mine/helper"
   ],
   "usingComponents": {
     "van-button": "./component/vant/button/index",
