@@ -1,0 +1,26 @@
+<view>
+  <view style="box-sizing: border-box;width: 100vw">
+    <view style="margin-left: 70rpx" id="scroll-view">
+
+      <block wx:for="{{logList}}">
+        <view>
+          <view class="item-header">
+            <image src="https://static.airbob.org/under-graduate/circle.png" class="header-round" />
+            <text>{{item.title}}</text>
+          </view>
+          <view class="item-body">
+            <view class="change-item" wx:if="{{item.content !== ''}}">更新概述：</view>
+            <block wx:for="{{item.content}}" wx:for-item="content"  wx:for-index="idx">
+              <view class="change-item">{{idx + 1}}<block>.</block>{{content}}</view>
+            </block>
+          </view>
+        </view>
+
+      </block>
+
+    </view>
+    <view class="toTop" bindtap="toTop">
+      Top
+    </view>
+  </view>
+</view>

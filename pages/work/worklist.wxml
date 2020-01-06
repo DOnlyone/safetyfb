@@ -1,0 +1,43 @@
+<view class="header">
+  <view class="nav" bindtap="changeTab">
+    <view class="nav-wrapper">
+      <block wx:for="{{tabs.list}}">
+        <view class="tab current" data-type="{{item.type}}" data-index="{{index}}" wx:if="{{index / 1 == tabs.currentIndex / 1}}">{{item.text}}</view>
+        <view class="tab" data-type="{{item.type}}" data-index="{{index}}" wx:else>{{item.text}}</view>
+      </block>
+    </view>  
+  </view>
+</view>
+<view class="weui-panel">
+            <view class="weui-panel__bd">
+              <block wx:for="{{contentList}}">
+                <navigator url="/pages/work/show" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" extra-data="{{item}}">
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">{{item.title}}</view>
+                        <view class="weui-media-box__desc">{{item.context}}</view>
+                    </view>
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="./../../image/content.jpg" />
+                    </view>
+                </navigator>
+              </block>
+            </view>
+</view>
+
+<view class="page__hd">
+    <!--<view class="page__title">title</view> -->
+    <view class="weui-panel__hd">具体内容</view>
+    <view class="weui-panel__bd">
+    <van-skeleton title avatar loading="{{false}}" row="3" >
+      <view class="van-skeleton van-skeleton--animate" > 
+        <view class="van-skeleton__avatar van-skeleton__avatar--round" style="width:32px;height:32px"></view>
+        <view class="van-skeleton__content">
+          <view class="van-skeleton__title" style="width:40%"> aaa</view>
+          <view class="van-skeleton__row">bbb</view>
+          <view class="van-skeleton__row">bbb</view>
+          <view class="van-skeleton__row">bbb</view>
+        </view>
+      </view>
+    </van-skeleton>
+    </view>
+</view>

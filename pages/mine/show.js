@@ -59,15 +59,21 @@ Page({
   },
 
   goFeedback:function() {
-
+    wx.navigateTo({
+      url: './helper'
+    })
   },
 
   goAboutUs: function() {
-
+    wx.navigateTo({
+      url:'./aboutus'
+    })
   },
 
   goChangelog: function() {
-
+    wx.navigateTo({
+      url: './changelog'
+    })
   },
   removeBind:function(){
 

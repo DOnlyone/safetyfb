@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "van-index-bar": "../../component/vant/index-bar/index",
+      "van-index-anchor": "../../component/vant/index-anchor/index",
+      "van-cell":"../../component/vant/cell/index"
+  }
+}

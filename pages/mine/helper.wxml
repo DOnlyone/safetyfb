@@ -1,0 +1,21 @@
+<view>
+  <view style="width:750rpx;margin-bottom:120rpx;">
+    <view class="feedback-container">
+      <view class="main-title">小程序相关问题</view>
+      <van-collapse value="{{ activeNames }}" bind:change="onChange">
+        <van-collapse-item title="为什么我进入小程序后所有功能都不能使用" name="1">
+          造成小程序所有功能都无法使用的原因可能有：
+1.微信版本过低，当前小程序不支持。解决：升级微信版本
+2.你更新了正方系统的密码，小程序密码未更新。解决：在“我的”中选择“解除绑定”，然后使用新密码重新登录小程序。
+3.部分未知原因。解决：尝试在后台中退出南邮小程序和微信App，然后重新进入。如果仍有问题请进行反馈或联系官Q：xxxxxxxx
+        </van-collapse-item>
+        <van-collapse-item title="为什么我的反馈没有回复" name="2">
+          反馈区的反馈需要人工回复，我们的所有运营成员均为南邮在校生且义务为大家服务，因此，同学们的反馈内容可能无法得到及时的回复，但会尽快处理告知情况。如果有紧急情况，请联系Q：xxxxxxxx.
+        </van-collapse-item>
+        <van-collapse-item title="南邮小程序如何获取我的信息？" name="3" disabled>
+          小程序由开发，其直属于学院办公室，故小程序的所有用户信息直接来自学院信息办。
+        </van-collapse-item>
+      </van-collapse>
+    </view>
+  </view>
+  </view>
