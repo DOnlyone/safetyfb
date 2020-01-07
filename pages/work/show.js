@@ -126,10 +126,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    appInstance.onShow();
-    appInstance.onLaunch();
+    var that = this;
+   // appInstance.onShow();
+   // appInstance.onLaunch();
     //var obj = JSON.parse(obj);
-    //console.log(options)
+    console.log(options.itemId);
+    var param = {};
+    param.id = options.itemId;
+    wx.request({
+      url: 'http://localhost:8080/api/listContent',
+      data: param,
+      success:function(msg){
+        if (msg.statusCode=200){
+          var resultData = msg.data;
+          if (resultData){
+            that.setData({
+              
+            })
+          }
+        }
+        console.log(msg);
+      }
+    })
     this.setData({
       option1: [{
           text: '全部商品1',
@@ -158,8 +176,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function (options) {
-    console.log(options);
+  onShow: function () {
   },
 
   /**

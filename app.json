@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/notice/contentlist",
+    "pages/work/worklist",
     "pages/mine/show",
     "pages/mine/aboutus",
     "pages/index/show",
@@ -10,7 +12,6 @@
     "pages/notice/show",
     "pages/logs/logs",
     "pages/work/userList",
-    "pages/work/worklist",
     "pages/mine/changelog",
     "pages/mine/helper"
   ],
@@ -49,7 +50,7 @@
         "selectedIconPath": "icon/_gongzuotai.png"
       },
       {
-        "pagePath": "pages/notice/show",
+        "pagePath": "pages/notice/contentlist",
         "text": "通知",
         "iconPath": "icon/tongzhi.png",
         "selectedIconPath": "icon/_tongzhi.png"

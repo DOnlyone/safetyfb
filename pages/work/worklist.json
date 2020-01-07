@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+        "van-uploader": "../../component/vant/uploader/index",
+        "van-button": "../../component/vant/button/index"
+  }
 }
