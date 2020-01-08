@@ -106,11 +106,32 @@ Page({
     param.context = pageData.text;
     param.type = pageData.type;
     param.urgent = pageData.urgent;
+    param.status = 0;
+    console.log(param);
+    /*
     wx.request({
       data: param,
       url: 'http://localhost:8080/api/saveContent',
       method: post,
       success: function(res) {
+        console.log(res);
+      }
+    })
+    */
+  },
+
+  submitDoc:function(e){
+    var pageData = this.data;
+    console.log(this.data);
+    var param = {};
+    param.context = pageData.text;
+    param.type = pageData.type;
+    param.urgent = pageData.urgent;
+    param.status = 1;
+    wx.request({
+      data:param,
+      url: 'http://localhost:8080/api/saveContent',
+      success:function(res){
         console.log(res);
       }
     })

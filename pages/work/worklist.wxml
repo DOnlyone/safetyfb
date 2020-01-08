@@ -87,7 +87,7 @@
     -->
     <view style="text-align:center;display:flex">
       <button bindtap="saveForm" style="margin-top:16px;width:120px" class="weui-btn mini-btn" type="primary" size="large">保存</button>
-      <button style="width:120px" class="weui-btn mini-btn" type="warn" size="large">提交</button>
+      <button bindtap="submitDoc" style="width:120px" class="weui-btn mini-btn" type="warn" size="large">提交</button>
     </view>
     <!--
 <view>

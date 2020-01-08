@@ -31,7 +31,11 @@ Page({
      var param = {};
     param.title = title;
     wx.request({
-      url: 'http://localhost:8080/api/',
+      data: param,
+      url: 'http://localhost:8080/api/listContent',
+      success:function(res){
+        console.log(res);
+      }
     })
     this.setData({
       inputVal: e.detail.value
