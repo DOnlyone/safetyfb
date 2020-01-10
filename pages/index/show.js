@@ -36,5 +36,35 @@ Page({
       icon: 'none',
       title: `切换至第${event.detail}项`
     });
-  }
+  },
+  onLoad:function(){
+
+   // this.showContent(param);
+    var param = {};
+    param.type = 'news';
+    this.showNotice(param);
+    
+  },
+  showNotice:function(param){
+    var param = {};
+    param.types = ['notice'];
+    var that = this;
+    wx.request({
+      data: param,
+      url: 'http://localhost:8080/api/getContentbyType',
+      success:function(res){
+        if(res.statusCode==200){
+          var resultObj = res.data;
+          if (resultObj.success){
+            var resObjs = resultObj.rows;
+            that.setData({
+              notice :resObjs[0]
+            })
+            
+          }
+        }
+      }
+    })
+  },
+ 
 });

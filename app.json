@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/notice/contentlist",
     "pages/work/worklist",
+    "pages/notice/contentlist",
+    
     "pages/mine/show",
     "pages/mine/aboutus",
     "pages/index/show",
@@ -32,7 +33,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "学生安全反馈平台",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

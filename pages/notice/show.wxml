@@ -9,13 +9,13 @@
             <view class="header">班级</view>
           </van-col>
           <van-col span="6">
-            <view class="body ">软件一班</view>
+            <view class="body ">{{classStr}}</view>
           </van-col>
           <van-col span="6">
             <view class="header">职位</view>
           </van-col>
           <van-col span="6">
-            <view class="body">班长</view>
+            <view class="body">{{userTitle}}</view>
           </van-col>
         </van-row>
         <van-row>
@@ -23,13 +23,13 @@
             <view class="header">类型</view>
           </van-col>
           <van-col span="6">
-            <view class="body ">通知</view>
+            <view class="body ">{{type}}</view>
           </van-col>
           <van-col span="6">
             <view class="header">状态</view>
           </van-col>
           <van-col span="6">
-            <view class="body">待审批</view>
+            <view class="body">{{status}}</view>
           </van-col>
         </van-row>
         <van-row>
@@ -65,7 +65,7 @@
     </view>
     <view class="weui-form-preview__bd">
       <view class="weui-article__p">
-        三年级某班张三最近心情低落，请辅导员关注
+        {{detail.context}}
       </view>
     </view>
 

@@ -1,4 +1,5 @@
 <!--pages/index/show.wxml-->
+<!--
 <view class="header">
   <view class="nav" bindtap="changeTab">
     <view class="nav-wrapper">
@@ -9,6 +10,7 @@
     </view>  
   </view>
 </view>
+-->
 <swiper indicator-dots="{{true}}">
   <swiper-item>
     <image src="../../image/a.png"></image>

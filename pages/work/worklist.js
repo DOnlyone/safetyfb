@@ -14,10 +14,11 @@ Page({
       }]
     },
     contentList: [],
+    content:'',
+    type:'notice',
     contentType: [{
         name: 'notice',
         value: '通知',
-        checked: 'true'
       },
       {
         name: 'news',
@@ -32,10 +33,11 @@ Page({
         value: '呈批件'
       }
     ],
+    urgent:'no',
     urgencys: [{
         name: 'no',
         value: '一般',
-        check: 'true'
+        checked: true
       },
       {
         name: 'imp',
@@ -63,6 +65,10 @@ Page({
       })
     } else {
       this.setData({
+        content:'',
+        type:'',
+        status:'',
+        urgent:'',
         currentIndex: 1
       })
     }
@@ -97,6 +103,11 @@ Page({
       text: e.detail.value
     })
   },
+  inputTitle:function(e){
+    this.setData({
+      title:e.detail.value
+    })
+  },
 
   saveForm: function(e) {
     console.log(e);
@@ -107,17 +118,18 @@ Page({
     param.type = pageData.type;
     param.urgent = pageData.urgent;
     param.status = 0;
-    console.log(param);
+    param.title = pageData.title;
+    console.log("表单提交数据"+param);
     /*
     wx.request({
       data: param,
       url: 'http://localhost:8080/api/saveContent',
-      method: post,
       success: function(res) {
         console.log(res);
       }
     })
     */
+    
   },
 
   submitDoc:function(e){
@@ -181,10 +193,44 @@ Page({
   }) {
     console.log(detail);
   },
+  showDetail:function(e){
+    var that = this;
+    console.log(e);
+    var itemId = e.currentTarget.dataset.itemid;
+    var param = {};
+    param.id = itemId;
+    wx.request({
+      data:param,
+      url: 'http://localhost:8080/api/listContent',
+      success:function(res){
+        if (res.statusCode=200){
+          if (res.data.success){
+            var resObj = res.data.rows;
+            var obj = resObj[0];
+            var urgent = obj.urgent;
+            //this.onShow();
+            that.setData({
+              urgent: obj.urgent,
+              title: obj.title,
+              type : obj.type,
+              text : obj.context
+            })
+          }
+          
+        }
+        console.log(res);
+      }
+    })
+    console.log(itemId);
+    this.setData({
+      currentIndex: 1
+    });
+  },
   onLoad: function(options) {
     var that = this;
     var param = {};
-    param.status = 1;
+    //查询当前用户保存的文档
+    param.status = 0;
     wx.request({
       url: 'http://localhost:8080/api/listContent',
       success(msg) {

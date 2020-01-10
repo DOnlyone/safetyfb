@@ -29,11 +29,22 @@ Page({
   inputTyping: function (e) {
      var title = e.detail.value;
      var param = {};
+     var that = this;
     param.title = title;
+    console.log(title);
     wx.request({
       data: param,
       url: 'http://localhost:8080/api/listContent',
       success:function(res){
+        if (res.statusCode){
+          var resData = res.data;
+          if (resData.success){
+            that.setData({
+              contentList: resData.rows
+            })
+            
+          }
+        }
         console.log(res);
       }
     })
