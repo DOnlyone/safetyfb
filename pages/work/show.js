@@ -51,19 +51,30 @@ Page({
   },
 
   saveForm:function(e){
-      console.log(e);
     var pageData = this.data;
-      console.log(this.data);
-      var param ={};
+    var param ={};
     param.context = pageData.text;
     param.type = pageData.type;
     param.urgent = pageData.urgent;
+    param.status = 0;//保存时设置状态为0
       wx.request({
         data: param,
         url: 'http://localhost:8080/api/saveContent',
         method:post,
         success:function(res){
-          console.log(res);
+          if (res.statusCode=200){
+            var resData = res.data;
+            if (resData.success){
+              wx.showToast({
+                title: '保存成功'
+              })
+            }
+          }else{
+            wx.showToast({
+              title: '保存失败，请检查网络状况'
+            })
+          }
+
         }
       })
   },

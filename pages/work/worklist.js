@@ -59,17 +59,18 @@ Page({
     var that = this;
     console.log(e);
     var curType = e.target.dataset.type;
-    if (curType == "0") {
+    if (curType == "1") {
       this.setData({
-        currentIndex: 0
+        currentIndex: 1
       })
     } else {
       this.setData({
-        content:'',
-        type:'',
-        status:'',
-        urgent:'',
-        currentIndex: 1
+        title:'',
+        text: '',
+        type: '',
+        status: '',
+        urgent: '',
+        currentIndex: 0
       })
     }
     /*
@@ -110,9 +111,8 @@ Page({
   },
 
   saveForm: function(e) {
-    console.log(e);
+    var that = this;
     var pageData = this.data;
-    console.log(this.data);
     var param = {};
     param.context = pageData.text;
     param.type = pageData.type;
@@ -120,33 +120,88 @@ Page({
     param.status = 0;
     param.title = pageData.title;
     console.log("表单提交数据"+param);
-    /*
     wx.request({
       data: param,
       url: 'http://localhost:8080/api/saveContent',
       success: function(res) {
-        console.log(res);
+        if (res.statusCode = 200) {
+          var resData = res.data;
+          if (resData.success) {
+            wx.showToast({
+              title: '保存成功'
+            });
+            that.setData({
+              title: '',
+              text: '',
+              type: '',
+              status: '',
+              urgent: '',
+              currentIndex: 0
+            });
+          }
+        } else {
+          wx.showToast({
+            title: '保存失败，请检查网络状况'
+          })
+        }
       }
-    })
-    */
-    
+    }) 
   },
 
   submitDoc:function(e){
+    var that = this;
     var pageData = this.data;
     console.log(this.data);
     var param = {};
+    param.id = pageData.itemId;
     param.context = pageData.text;
     param.type = pageData.type;
     param.urgent = pageData.urgent;
     param.status = 1;
-    wx.request({
-      data:param,
-      url: 'http://localhost:8080/api/saveContent',
-      success:function(res){
-        console.log(res);
+    var userInfo = wx.getStorageSync('userInfo')
+    var userObj  = JSON.parse(userInfo);
+    param.createUser = {};
+    param.createUser.userId = userObj.userId;
+
+/*
+    wx.showActionSheet({
+      itemList: ['A', 'B', 'C'],
+      success(res) {
+        console.log(res.tapIndex)
+      },
+      fail(res) {
+        console.log(res.errMsg)
       }
     })
+  */
+    wx.request({
+      data:param,
+      method:'post',
+      url: 'http://localhost:8080/api/submitDoc',
+      success:function(res){
+        if(res.statusCode==200){
+          var resData = res.data;
+          if (resData.success){
+            wx.showToast({
+              title:'已提交给下一个节点！'
+            });
+            that.setData({
+              title: '',
+              text: '',
+              type: '',
+              status: '',
+              urgent: '',
+              currentIndex: 0
+            });
+          }
+        }else{
+          wx.showToast({
+            title: '网络出错，请检查网络后重试！'
+          })
+        }
+      }
+    })
+    
   },
 
   parameterTap: function(e) {
@@ -210,18 +265,18 @@ Page({
             var urgent = obj.urgent;
             //this.onShow();
             that.setData({
+              itemId: obj.id,
               urgent: obj.urgent,
               title: obj.title,
               type : obj.type,
               text : obj.context
             })
+          
           }
           
         }
-        console.log(res);
       }
     })
-    console.log(itemId);
     this.setData({
       currentIndex: 1
     });

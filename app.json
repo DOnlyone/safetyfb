@@ -1,12 +1,11 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/work/worklist",
     "pages/notice/contentlist",
-    
     "pages/mine/show",
     "pages/mine/aboutus",
     "pages/index/show",
-    "pages/login/login",
     "pages/index/index",
     "pages/work/index",
     "pages/work/show",

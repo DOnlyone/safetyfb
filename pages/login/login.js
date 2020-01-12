@@ -36,7 +36,6 @@ Page({
     wx.showLoading({
       title: '登录中...',
     })
-    console.log(e);
     this.setData({ disabled: true });
 
     wx.request({
@@ -62,7 +61,7 @@ Page({
               duration: 2000
             })
           } else {
-            wx.setStorageSync('student', res.data.data);
+            wx.setStorageSync('userInfo', res.data.resultData);
             setTimeout(function () {
               wx.switchTab({ url: '/pages/index/show'})
             }, 2000)

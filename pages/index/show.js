@@ -10,7 +10,8 @@ Page({
         text: '有情况反馈',
         type: '2'
       }]
-    }
+    },
+    notice:{}
   },
   onChange(event) {
     // event.detail 的值为当前选中项的索引
@@ -47,7 +48,9 @@ Page({
   },
   showNotice:function(param){
     var param = {};
-    param.types = ['notice'];
+    var types = new Array();
+    types.push('notice');
+    param.types = types;
     var that = this;
     wx.request({
       data: param,
@@ -57,14 +60,20 @@ Page({
           var resultObj = res.data;
           if (resultObj.success){
             var resObjs = resultObj.rows;
+            var obj = resObjs[0];
             that.setData({
-              notice :resObjs[0]
+              notice :{
+                title: obj.title,
+                context: obj.context,
+                createUser: obj.createUser,
+                createDate: obj.cteateDate,
+                type: obj.type
+              }
             })
-            
           }
         }
       }
     })
-  },
+  }
  
 });
