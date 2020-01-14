@@ -119,9 +119,13 @@ Page({
     param.urgent = pageData.urgent;
     param.status = 0;
     param.title = pageData.title;
-    console.log("表单提交数据"+param);
+    var userInfo = wx.getStorageSync('userInfo')
+    var userObj = JSON.parse(userInfo);
+    param.createUser = {};
+    param.createUser.userId = userObj.userId;
     wx.request({
       data: param,
+      method: 'post',
       url: 'http://localhost:8080/api/saveContent',
       success: function(res) {
         if (res.statusCode = 200) {
@@ -138,6 +142,7 @@ Page({
               urgent: '',
               currentIndex: 0
             });
+            that.onLoad();
           }
         } else {
           wx.showToast({
@@ -151,7 +156,6 @@ Page({
   submitDoc:function(e){
     var that = this;
     var pageData = this.data;
-    console.log(this.data);
     var param = {};
     param.id = pageData.itemId;
     param.context = pageData.text;
@@ -162,6 +166,7 @@ Page({
     var userObj  = JSON.parse(userInfo);
     param.createUser = {};
     param.createUser.userId = userObj.userId;
+
 
 /*
     wx.showActionSheet({
@@ -193,6 +198,7 @@ Page({
               urgent: '',
               currentIndex: 0
             });
+            that.onLoad();
           }
         }else{
           wx.showToast({
@@ -256,6 +262,7 @@ Page({
     param.id = itemId;
     wx.request({
       data:param,
+      method:'post',
       url: 'http://localhost:8080/api/listContent',
       success:function(res){
         if (res.statusCode=200){
@@ -284,12 +291,17 @@ Page({
   onLoad: function(options) {
     var that = this;
     var param = {};
-    //查询当前用户保存的文档
     param.status = 0;
+    var userInfo = wx.getStorageSync('userInfo')
+    var userObj = JSON.parse(userInfo);
+    param.createUser = {};
+    param.createUser.userId = userObj.userId;
+    //查询当前用户保存的文档
     wx.request({
+      data:param,
+      method:'post',
       url: 'http://localhost:8080/api/listContent',
       success(msg) {
-        console.log(msg);
         if (msg.statusCode == 200) {
           var resultObj = msg.data;
           if (resultObj.success) {

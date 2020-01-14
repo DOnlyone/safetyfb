@@ -60,10 +60,15 @@ Page({
     var that = this;
     var param = {};
     param.status = 1;
+    var userInfo = wx.getStorageSync('userInfo')
+    var userObj = JSON.parse(userInfo);
+    param.createUser = {};
+    param.createUser.userId = userObj.userId;
     wx.request({
+      data:param,
+      method:'post',
       url: 'http://localhost:8080/api/listContent',
       success(msg) {
-        console.log(msg);
         if (msg.statusCode == 200) {
           var resultObj = msg.data;
           if (resultObj.success) {
