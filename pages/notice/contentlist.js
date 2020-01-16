@@ -31,10 +31,13 @@ Page({
      var param = {};
      var that = this;
     param.title = title;
-    console.log(title);
+    param.status = 1;
+    var userInfo = wx.getStorageSync('userInfo')
+    var userObj = JSON.parse(userInfo);
+    param.userId = userObj.userId;
     wx.request({
       data: param,
-      url: 'http://localhost:8080/api/listContent',
+      url: 'http://localhost:8080/api/getContentsByUser',
       success:function(res){
         if (res.statusCode){
           var resData = res.data;
@@ -45,7 +48,6 @@ Page({
             
           }
         }
-        console.log(res);
       }
     })
     this.setData({
@@ -62,12 +64,10 @@ Page({
     param.status = 1;
     var userInfo = wx.getStorageSync('userInfo')
     var userObj = JSON.parse(userInfo);
-    param.createUser = {};
-    param.createUser.userId = userObj.userId;
+    param.userId = userObj.userId;
     wx.request({
       data:param,
-      method:'post',
-      url: 'http://localhost:8080/api/listContent',
+      url: 'http://localhost:8080/api/getContentsByUser',
       success(msg) {
         if (msg.statusCode == 200) {
           var resultObj = msg.data;
